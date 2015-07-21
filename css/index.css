@@ -1,0 +1,43 @@
+.fade-out-target{
+    margin:0 auto;
+    width: 200px;
+    height:100px;
+    border:1px solid #aaa;
+}
+.mask{
+    /*display: none;*/
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    overflow: hidden;
+    background-color: #000;
+    background-color: rgba(0,0,0,0.75);
+    filter:alpha(opacity=75);
+
+/*    transition: 10s ease;
+    -webkit-transition: 10s ease;
+    -moz-transition: 10s ease;
+    -o-transition: 10s ease;*/
+}
+.panel{
+    width: 890px;
+    height: 546px;
+    background:url(../img/win10.png);
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    margin-left: -445px;
+    margin-top: -273px;
+}
+.close{
+    width: 39px;
+    height: 39px;
+    /*background-color: rgba(255,0,0,0.5);*/
+    position: absolute;
+    right: 55px;
+    top: 53px;
+    cursor: pointer;
+}
+
