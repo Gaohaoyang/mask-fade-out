@@ -10,6 +10,7 @@
     border:1px solid #aaa;
 }
 .mask{
+    display: none;
     position: absolute;
     z-index: 1000;
     left: 0;
@@ -22,7 +23,7 @@
     position: fixed;
     z-index: 1001;
     left: 50%;
-    top: 50%;
+    top: -820px;
     margin-left: -445px;
     margin-top: -273px;
 }
@@ -36,7 +37,6 @@
     margin-left: -445px;
     margin-top: -273px;
 }
-
 .mask-close{
     width: 39px;
     height: 39px;
