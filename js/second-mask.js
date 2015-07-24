@@ -4,7 +4,7 @@ function win10Mask2() {
     //25,26,31,32 这4个系统出现遮罩层
     var selectOSNumInit = $('#selectOS').val(); //系统编号
     var maskHadShowed = false;
-    console.log(selectOSNumInit);
+    // alert(selectOSNumInit);
     //如果一开始就是这4个系统之一，弹层
     if (selectOSNumInit == 25 || selectOSNumInit == 26 || selectOSNumInit == 31 || selectOSNumInit == 32) {
 
@@ -13,6 +13,7 @@ function win10Mask2() {
     } else {
         $('#selectOS').change(function() {
             var selectOSNum = $('#selectOS').val();
+            // alert(selectOSNum);
             if (maskHadShowed === false) { //未出现过遮罩层
                 if (selectOSNum == 25 || selectOSNum == 26 || selectOSNum == 31 || selectOSNum == 32) {
 
@@ -26,20 +27,20 @@ function win10Mask2() {
 
     function showMask() {
         var picTop = $(window).height() / 2;
-        console.log(picTop);
+        $('.mask-panel').show();
         $('.mask')
             .height($(document).height())
             .width($(document).width())
-            .fadeIn(1000);
+            .fadeIn(1100);
         $('.mask-pic').animate({
             top: picTop
-        }, 500);
+        }, 800);
 
         //消失
         timer = setTimeout(function() {
             fadeToTarget($('#target'));
             // console.log("setTimeout");
-        }, 10000);
+        }, 15000);
 
         $('.mask-close').click(function() {
             fadeToTarget($('#target'));
@@ -54,7 +55,7 @@ function win10Mask2() {
      */
     function fadeToTarget(targetJ) {
 
-        $('.mask-close').hide(); //隐藏按钮
+        $('.mask-panel').hide();
 
         //计算目标位置
         var targetTop = targetJ.offset().top - $(document).scrollTop() + targetJ.height() / 2 + 273;

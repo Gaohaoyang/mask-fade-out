@@ -15,7 +15,8 @@
     left: 0;
     top: 0;
     background-color: #000;
-    background-color: rgba(0,0,0,0.75);
+    /* background-color: rgba(0,0,0,0.75); */
+    opacity: 0.75;
     filter:alpha(opacity=75);
 }
 .mask-pic{
@@ -36,8 +37,24 @@
     margin-left: -445px;
     margin-top: -273px;
 }
-
+.mask-panel .click{
+    background-color: #fff;
+    opacity: 0;
+    filter:alpha(opacity=0);
+    display: block;
+    /*z-index: 1003;*/
+    /*background: red;*/
+    /*border: 1 solid red;*/
+    position: absolute;
+    top: 70px;
+    left:49px;
+    width: 773px;
+    height: 430px;
+}
 .mask-close{
+    background-color: #fff;
+    opacity: 0;
+    filter:alpha(opacity=0);
     width: 39px;
     height: 39px;
     position: absolute;

@@ -14,7 +14,7 @@ function win10Mask() {
         timer = setTimeout(function() {
             fadeToTarget($('#target'));
             // console.log("setTimeout");
-        }, 10000);
+        }, 15000);
 
         $('.mask-close').click(function() {
             fadeToTarget($('#target'));
@@ -29,7 +29,8 @@ function win10Mask() {
      */
     function fadeToTarget(targetJ) {
 
-        $('.mask-close').hide(); //隐藏按钮
+        // $('.mask-close').hide(); //隐藏按钮
+        $('.mask-panel').hide();
 
         //计算目标位置
         var targetTop = targetJ.offset().top - $(document).scrollTop() + targetJ.height() / 2 + 273;
