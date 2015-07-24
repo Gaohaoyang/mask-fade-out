@@ -1,9 +1,12 @@
-win10Mask2();
+$(document).ready(function() {
+    win10Mask2();
+});
 
 function win10Mask2() {
     //25,26,31,32 这4个系统出现遮罩层
     var selectOSNumInit = $('#selectOS').val(); //系统编号
     var maskHadShowed = false;
+    var timer;
     // alert(selectOSNumInit);
     //如果一开始就是这4个系统之一，弹层
     if (selectOSNumInit == 25 || selectOSNumInit == 26 || selectOSNumInit == 31 || selectOSNumInit == 32) {
@@ -11,7 +14,7 @@ function win10Mask2() {
         showMask();
 
     } else {
-        $('#selectOS').change(function() {
+        $(document).on("change", "#selectOS", function() {
             var selectOSNum = $('#selectOS').val();
             // alert(selectOSNum);
             if (maskHadShowed === false) { //未出现过遮罩层

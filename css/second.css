@@ -21,7 +21,6 @@
     filter:alpha(opacity=75);
 }
 .mask-pic{
-
     position: fixed;
     z-index: 1001;
     left: 50%;
@@ -45,8 +44,6 @@
     opacity: 0;
     filter:alpha(opacity=0);
     display: block;
-    /*background: red;*/
-    /*border: 1 solid red;*/
     position: absolute;
     top: 70px;
     left:49px;
